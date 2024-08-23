@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Ur Mom</title>
+    <link rel="stylesheet" type="text/css" href="showstyling.css" />
+</head>
+<body class="photos">
+    <div id="siteWrapper">
+        <my-header></my-header>
+        <div id="bodyWrapper">
+            <h1>Gallery</h1>
+            <div class="full-img" id="fullImgBox">
+                <img src="" id="fullImg">
+                <div id="nextPhoto">
+                    <svg onclick="event.stopPropagation(); navigateImage(-1)"><path d="M20,0L0,10L20,20Z"></path></svg>
+                    <svg onclick="event.stopPropagation(); navigateImage(1)"><path d="M0,0L20,10L0,20Z"></path></svg>
+                </div>
+                <span onclick="closeFullImg()">&times;</span>
+                <div class="tur" id="photographerCredit">Photo by <a href="https://www.arthursiwek.com/" target="_blank">Arthur Siwek</a></div>
+            </div>
+            
+            <div class="img-gallery">
+                <img src="/galimages/img-1.jpg" onclick="openFullImg(this.src, 0, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-2.jpg" onclick="openFullImg(this.src, 1, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-11.jpg" onclick="openFullImg(this.src, 2, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-5.jpg" onclick="openFullImg(this.src, 3, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-6.jpg" onclick="openFullImg(this.src, 4, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-7.jpg" onclick="openFullImg(this.src, 5, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-8.jpg" onclick="openFullImg(this.src, 6, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-9.jpg" onclick="openFullImg(this.src, 7, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/studio4.jpg" onclick="openFullImg(this.src, 8, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/studio1.jpg" onclick="openFullImg(this.src, 9, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/studio2.jpg" onclick="openFullImg(this.src, 10, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/studio3.jpg" onclick="openFullImg(this.src, 11, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-17.jpg" onclick="openFullImg(this.src, 12, this.className)" alt="Ur Mom Photo" class="per2">
+                <img src="/galimages/img-3.jpg" onclick="openFullImg(this.src, 13, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-4.jpg" onclick="openFullImg(this.src, 14, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/img-19.jpg" onclick="openFullImg(this.src, 15, this.className)" alt="Ur Mom Photo" class="per2">
+                <img src="/galimages/img-20.jpg" onclick="openFullImg(this.src, 16, this.className)" alt="Ur Mom Photo" class="per2">
+                <img src="/galimages/img-21.jpg" onclick="openFullImg(this.src, 17, this.className)" alt="Ur Mom Photo" class="per2">
+                <img src="/galimages/img-22.jpg" onclick="openFullImg(this.src, 18, this.className)" alt="Ur Mom Photo" class="per2">
+                <img src="galimages/kf.jpg" onclick="openFullImg(this.src, 19, this.className)" alt="Ur Mom Photo" class="per4">
+                <img src="galimages/kf1.jpg" onclick="openFullImg(this.src, 20, this.className)" alt="Ur Mom Photo" class="per4">
+                <img src="galimages/kf2.jpg" onclick="openFullImg(this.src, 21, this.className)" alt="Ur Mom Photo" class="per4">
+                <img src="galimages/kf3.jpg" onclick="openFullImg(this.src, 22, this.className)" alt="Ur Mom Photo" class="per4">
+                <img src="galimages/kf4.jpg" onclick="openFullImg(this.src, 23, this.className)" alt="Ur Mom Photo" class="per4">
+                <img src="galimages/gr1.jpg" onclick="openFullImg(this.src, 24, this.className)" alt="Ur Mom Photo" class="per5">
+                <img src="galimages/gr2.jpg" onclick="openFullImg(this.src, 25, this.className)" alt="Ur Mom Photo" class="per5">
+                <img src="galimages/gr3.jpg" onclick="openFullImg(this.src, 26, this.className)" alt="Ur Mom Photo" class="per5">
+                <img src="galimages/av.jpg" onclick="openFullImg(this.src, 27, this.className)" alt="Ur Mom Photo" class="per6">
+                <img src="galimages/av1.jpg" onclick="openFullImg(this.src, 28, this.className)" alt="Ur Mom Photo" class="per6">
+                <img src="galimages/av2.jpg" onclick="openFullImg(this.src, 29, this.className)" alt="Ur Mom Photo" class="per6">
+                <img src="/galimages/left.jpg" onclick="openFullImg(this.src, 30, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/middle.jpg" onclick="openFullImg(this.src, 31, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/right.jpg" onclick="openFullImg(this.src, 32, this.className)" alt="Ur Mom Photo" class="arsi">
+                <img src="/galimages/navypier1.jpg" onclick="openFullImg(this.src, 33, this.className)" alt="Ur Mom Photo" class="per7">
+                <img src="/galimages/navypier2.jpg" onclick="openFullImg(this.src, 34, this.className)" alt="Ur Mom Photo" class="per7">
+                <img src="/galimages/navypier3.jpg" onclick="openFullImg(this.src, 35, this.className)" alt="Ur Mom Photo" class="per7">
+                <img src="/galimages/navypier4.jpg" onclick="openFullImg(this.src, 36, this.className)" alt="Ur Mom Photo" class="per7">
+                <img src="/galimages/navypier5.jpg" onclick="openFullImg(this.src, 37, this.className)" alt="Ur Mom Photo" class="per7">
+                <img src="/galimages/navypier6.jpg" onclick="openFullImg(this.src, 38, this.className)" alt="Ur Mom Photo" class="per7">
+
+            </div>
+            <!--<div class="turmachine">
+                <p>Photos by <a href="https://www.arthursiwek.com/" target="_blank">Arthur Siwek</a></p>
+            </div>-->
+        </div>
+        <my-footer></my-footer>
+    </div>
+</div>
+<script src="includes/headerFooter.js"></script>
+<script src="assets.js"></script>
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+    var headerWrapper = document.getElementById("headerWrapperHome");
+    var photographerCredit = document.getElementById("photographerCredit");
+    var currentIndex = 0;
+    var images = document.querySelectorAll(".img-gallery img");
+
+    function openFullImg(pic, index, className) {
+        fullImgBox.style.display = "flex";
+        headerWrapper.style.zIndex = "-1";
+        headerWrapper.style.position = "relative";
+        fullImg.src = pic;
+        currentIndex = index;
+        setTimeout(() => {
+            fullImgBox.classList.add("show");
+        }, 10);
+        updatePhotographerCredit(className);
+    }
+
+    function closeFullImg() {
+        fullImgBox.classList.remove("show");
+        setTimeout(() => {
+            fullImgBox.style.display = "none";
+            headerWrapper.style.zIndex = "9999";
+            headerWrapper.style.position = "unset";
+        }, 500);
+    }
+
+    function navigateImage(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        fullImg.src = images[currentIndex].src;
+        updatePhotographerCredit(images[currentIndex].className);
+    }
+    function updatePhotographerCredit(className) {
+            if (className.includes('arsi')) {
+                photographerCredit.innerHTML = 'Photo by <a href="https://www.arthursiwek.com/" target="_blank">Arthur Siwek</a>';
+            } else if (className.includes('per2')) {
+                photographerCredit.innerHTML = 'Photo by <a href="https://www.instagram.com/karbon_planet/" target="_blank">Xavier Fraire</a>';
+            } else if (className.includes('per3')) {
+                photographerCredit.innerHTML = 'Photo by <a href="https://www.instagram.com/carsonkenned.y/" target="_blank">Carson Kennedy</a>';
+            } else if (className.includes('per4')) {
+                photographerCredit.innerHTML = 'Photo by <a href="https://www.instagram.com/photos.by.farver/" target="_blank">Kamaron Farver</a>';
+            } else if (className.includes('per5')) {
+                photographerCredit.innerHTML = 'Photo by <a href="https://www.instagram.com/georgiapeach_photography_/" target="_blank">Georgia Roe</a>';
+            } else if (className.includes('per6')) {
+                photographerCredit.innerHTML = 'Photo by <a href="https://www.instagram.com/alfs.photography/" target="_blank">Alfred Valdez</a>';
+            } else if (className.includes('per7')) {
+                photographerCredit.innerHTML = 'Photo by Michael Tuffy';
+            } else {
+                photographerCredit.innerHTML = 'Photo by Unknown';
+            }
+        }
+</script> 
+</body>
+</html>

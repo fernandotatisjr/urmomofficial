@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ur Mom</title>
+    <link rel="stylesheet" type="text/css" href="showstyling.css" />
+</head>
+<body class="sounds">
+    <div id="siteWrapper">
+        <my-header></my-header>
+        <div id="bodyWrapper">
+            <div id="soundHeader">
+                <h1>Releases</h1>
+                <select name="Filter" id="filterDropdown">
+                    <option value="" disabled selected hidden>Choose type...</option>
+                    <option value="reset">All</option>
+                    <option value="single" id="singleO">Single</option>
+                    <option value="ep" id="epO">EP</option>
+                    <!-- <option value="album" id="albumO">Album</option> -->
+                </select>
+            </div>
+            <div id="soundCovers">
+                <div class="albCov singleArt">
+                    <a href="ocd.html"><img src="/images/OCD_FINAL_ARTWORK_2.jpg" alt="OCD Single Cover"></a>
+                    <div class="content">
+                        <!--<h3>Ur Mom</h3>
+                        <p>2023</p>-->
+                    </div>
+                </div>
+                <div class="albCov epArt">
+                    <a href="ur-mom-ep.html"><img src="/images/UrMomEPcoverFINAL.jpg" alt="Ur Mom EP Cover"></a>
+                    <div class="content">
+                        <!--<h3>Ur Mom</h3>
+                        <p>2023</p>-->
+                    </div>
+                </div>
+                <div class="albCov singleArt">
+                    <a href="conquistador.html"><img src="/images/conquistador.jpg" alt="Conquistador Cover"></a>
+                    <div class="content">
+                        <!--<h3>Ur Mom</h3>
+                        <p>2023</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <my-footer></my-footer>
+    </div>
+    <script src="includes/headerFooter.js"></script>
+    <script src="assets.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('filterDropdown').addEventListener('change', function() {
+                var selectedValue = this.value;
+                var contain = document.querySelector('#soundCovers');
+                var allImages = document.querySelectorAll('.albCov');
+                var singleArtImages = document.querySelectorAll('.singleArt');
+                var epArtImages = document.querySelectorAll('.epArt');
+
+                singleArtImages.forEach(function(image) {
+                    image.style.display = 'none';
+                });
+
+                epArtImages.forEach(function(image) {
+                    image.style.display = 'none';
+                });
+
+                if (selectedValue === 'single') {
+                    singleArtImages.forEach(function(image) {
+                        image.style.display = 'grid';
+                    });
+                } else if (selectedValue === 'ep') {
+                    epArtImages.forEach(function(image) {
+                        image.style.display = 'block';
+                    });
+                } else if (selectedValue === 'reset'){
+                    allImages.forEach(function(image) {
+                        image.style.display = 'grid';
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+document.querySelectorAll('.albCov img').forEach(img => {
+    img.addEventListener('mousemove', (e) => {
+        const rect = img.getBoundingClientRect();
+        const x = e.clientX - rect.left; // X position within the element
+        const y = e.clientY - rect.top;  // Y position within the element
+        const width = rect.width;
+        const height = rect.height;
+        
+        // Calculate the rotation based on cursor position relative to the center of the image
+        const rotateX = ((y / height) - 0.5) * -50; // Inverted vertical tilt
+        const rotateY = (0.5 - (x / width)) * -50;  // Inverted horizontal tilt
+
+        // Apply the transformation with proportional tilting
+        img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    img.addEventListener('mouseleave', () => {
+        img.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    });
+});
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Ur Mom</title>
+    <meta name="keywords" content="">
+    <meta name="title" content="Chicago Indie Rock Band">
+    <meta property="og:site_name" content="Chicago Indie Rock Band | Park Ridge, IL">
+    <meta property="og:title" content="Home | Ur Mom">
+    <meta property="og:image" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="showstyling.css" />
+</head>
+<body class="home">
+    <div id="siteWrapper">
+        <my-header></my-header>
+        <div id="bodyWrapperHome">
+            <div class="container">
+            <div class="epHome">
+                <div class="covUman">
+                    <div class="uman">
+                        <div class="lois"><img src="/images/blogo.png" alt="Black Ur Mom Logo" class="rotating"> <p>is...</p></div>
+                        <h1>a rock band from the northwest suburbs of Chicago, Illinois.</h1>
+                        <p>Young, passionate, and progressive. Inspired by folk, funk, rock, & blues.</p>
+                        <p>Ur Mom is eager to bring back the vitality of raw energy in the studio, & onstage.</p> 
+                    </div>
+                    <div class="cov">
+                        <img src="/images/OCD_FINAL_ARTWORK_2.jpg" alt="Ur Mom OCD Cover">
+                        <div class="bbtn"><a href="/ocd.html">Listen</a></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="greetings">
+                <img src="images/beatkitch.jpg" alt="Ur Mom Beat Kitchen">
+            </div>
+            <div class="video-container">
+                <div class="ytthumb">
+                    <div class="yttext scroll-element">
+                        <img src="/images/OCDLogo forWebsite.png" alt="Ur Mom - OCD art">
+                        <h3>Live from the <span>Subterranean</span></h3>
+                    </div>
+                    <div class="videoWrapper scroll-element">
+                        <iframe src="https://www.youtube.com/embed/DGdtp9MJMxE?si=HUTyIUhOj8C7jl_P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="ytthumb" >
+                    <div class="videoWrapper scroll-element">
+                        <iframe id="mob2" src="https://www.youtube.com/embed/mPCoL7t08FI?si=pD7zl_7O_qsBcxo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="yttext scroll-element">
+                        <img src="/images/umlvid.png" alt="Ur Mom logo for YouTube">
+                        <h3>Tiny Desk</h3>
+                    </div>
+                </div>
+              </div>
+            
+            <div id="videoModal" class="modal">
+                <div class="modal-content">
+                    <div id="mb">
+                        <span class="close">&times;</span>
+                        <div class="videoWrapper scroll-element">
+                            <iframe id="videoFrame" width="840" height="472" src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="greetings2">
+                <img src="images/23.jpg" alt="Ur Mom Promo Picture">
+            </div>
+            <div id="hpnextShow">
+                <div id="showContainer">
+                    <h3 class="scroll-element">Next Show</h3><span>Next Show - Next Show - Next Show - Next Show</span>
+                    <div id="hprow" class="scroll-element">
+                        <div class="shcontain">
+                            <div id="shleft">
+                                <div id="hpdate">
+                                    <p>Aug 29th, 2024</p>
+                                </div>
+                                <div id="hpvenue">
+                                    <h3>Ravinia</h3>
+                                    <p>Highland Park, IL</p>
+                                </div>
+                            </div>
+                            <div id="hpbtn">
+                                <div class="bbtn"><a href="https://www.ravinia.org/Online/default.asp?BOparam::WScontent::loadArticle::permalink=082924-ZZTopLynyrdSkynyrd&BOparam::WScontent::loadArticle::context_id=" target="_blank">Tickets</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bbtn" id="moreShows"><a href="/shows.html" id="more">See More</a></div>
+                </div>
+            </div>
+            </div>
+            <!--<div id="homepho">
+                <div id="overflow">
+                    <div id="hpgallery">
+                        <img src="/images/subtcrop.jpg" alt="">
+                        <img src="/images/beatkitchen.jpg" alt="">
+                        <img src="/images/tom.jpg" alt="">
+                        <img src="/images/bb1a1556.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        </div>
+        </div>
+        <my-footer></my-footer>
+</div>
+<script src="includes/headerFooter.js"></script>
+<script src="assets.js"></script>  
+<script>
+document.querySelectorAll('.cov').forEach(cov => {
+    cov.addEventListener('click', () => {
+        cov.classList.toggle('show-before');
+    });
+});
+</script>
+</body>
+</html>
